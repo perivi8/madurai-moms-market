@@ -17,7 +17,7 @@ const Index = () => {
     {
       id: '1',
       name: 'Premium Basmati Rice',
-      image: '/api/placeholder/300/200',
+      image: '/shop/1.jpg',
       retailPrice: 120,
       wholesalePrice: 100,
       unit: 'kg',
@@ -27,7 +27,7 @@ const Index = () => {
     {
       id: '2',
       name: 'Tata Tea Premium',
-      image: '/api/placeholder/300/200',
+      image: '/shop/2.jpg',
       retailPrice: 85,
       wholesalePrice: 70,
       unit: '500g',
@@ -36,7 +36,7 @@ const Index = () => {
     {
       id: '3',
       name: 'Fortune Sunflower Oil',
-      image: '/api/placeholder/300/200',
+      image: '/shop/3.jpg',
       retailPrice: 180,
       wholesalePrice: 165,
       unit: 'litre',
@@ -45,7 +45,7 @@ const Index = () => {
     {
       id: '4',
       name: 'Parle-G Biscuits',
-      image: '/api/placeholder/300/200',
+      image: '/shop/4.jpg',
       retailPrice: 25,
       unit: 'pack',
       category: 'Packaged Foods'
