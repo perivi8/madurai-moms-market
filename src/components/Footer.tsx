@@ -30,6 +30,10 @@ const Footer = () => {
                 <Mail className="h-4 w-4 opacity-75" />
                 <span className="font-body">contact@srimeenakshi.store</span>
               </div>
+              <div className="flex items-center gap-3 text-sm">
+                <Mail className="h-4 w-4 opacity-75" />
+                <span className="font-body">srimeenakshistore388@gmail.com</span>
+              </div>
               <div className="flex items-start gap-3 text-sm">
                 <MapPin className="h-4 w-4 opacity-75 mt-0.5" />
                 <span className="font-body leading-relaxed">
