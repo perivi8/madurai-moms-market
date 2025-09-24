@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -63,16 +64,16 @@ const Footer = () => {
               {[
                 { name: 'Shop Groceries', href: '/shop' },
                 { name: 'Wholesale Orders', href: '/wholesale' },
-                { name: 'Track Your Order', href: '/track' },
-                { name: 'Return Policy', href: '/returns' },
+                { name: 'Track Your Order', href: '/track-order' },
+                { name: 'Return Policy', href: '/return-policy' },
               ].map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="block text-sm font-body hover:opacity-80 transition-opacity"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
             

@@ -1,7 +1,10 @@
-import { ShoppingCart, Package } from 'lucide-react';
+import { ShoppingCart, Package, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '@/contexts/CartContext';
+import { useToast } from '@/hooks/use-toast';
 
 interface ProductCardProps {
   id: string;
@@ -26,16 +29,53 @@ const ProductCard = ({
   inStock = true,
   discount 
 }: ProductCardProps) => {
+  const navigate = useNavigate();
+  const { dispatch } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = (priceType: 'retail' | 'wholesale') => {
+    dispatch({
+      type: 'ADD_ITEM',
+      payload: {
+        product: { id, name, image, retailPrice, wholesalePrice, unit, category, inStock, discount },
+        priceType
+      }
+    });
+    
+    toast({
+      title: "Added to Cart!",
+      description: `${name} has been added to your cart.`,
+    });
+  };
+
+  const handleViewDetails = () => {
+    navigate(`/product/${id}`);
+  };
   return (
     <Card className="group hover:shadow-product transition-all duration-200 border-0 shadow-soft">
       <CardContent className="p-0">
         {/* Product Image */}
-        <div className="relative overflow-hidden rounded-t-card bg-cream/30">
+        <div className="relative overflow-hidden rounded-t-card bg-cream/30 cursor-pointer" onClick={handleViewDetails}>
           <img
             src={image}
             alt={`${name} - Fresh groceries from Sri Meenakshi Store`}
-            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-56 lg:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
           />
+          
+          {/* View Details Overlay */}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+            <Button
+              size="sm"
+              className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-foreground hover:bg-gray-100"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleViewDetails();
+              }}
+            >
+              <Eye className="mr-1 h-4 w-4" />
+              View Details
+            </Button>
+          </div>
           
           {/* Discount Badge */}
           {discount && (
@@ -62,7 +102,10 @@ const ProductCard = ({
           </Badge>
 
           {/* Product Name */}
-          <h3 className="font-heading font-semibold text-foreground leading-tight line-clamp-2">
+          <h3 
+            className="font-heading font-semibold text-foreground leading-tight line-clamp-2 cursor-pointer hover:text-primary transition-colors"
+            onClick={handleViewDetails}
+          >
             {name}
           </h3>
 
@@ -96,6 +139,7 @@ const ProductCard = ({
               className="flex-1 bg-primary hover:bg-primary-hover text-primary-foreground font-label font-semibold shadow-button"
               size="sm"
               disabled={!inStock}
+              onClick={() => handleAddToCart('retail')}
             >
               <ShoppingCart className="mr-1 h-4 w-4" />
               Add to Cart
@@ -106,6 +150,9 @@ const ProductCard = ({
                 variant="outline" 
                 size="sm"
                 className="border-orange text-orange hover:bg-orange hover:text-orange-foreground"
+                onClick={() => handleAddToCart('wholesale')}
+                disabled={!inStock}
+                title="Add wholesale to cart"
               >
                 <Package className="h-4 w-4" />
               </Button>

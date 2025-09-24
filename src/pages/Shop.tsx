@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Filter, Search, Grid3X3, List } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -6,70 +6,43 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
+import { allProducts, categories, filterProducts, getTotalPages } from '@/data/products';
+
+const ITEMS_PER_PAGE = 8;
 
 const Shop = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [searchQuery, setSearchQuery] = useState('');
-  
-  // Mock products data
-  const products = [
-    {
-      id: '1',
-      name: 'Premium Basmati Rice',
-      image: '/api/placeholder/300/200',
-      retailPrice: 120,
-      wholesalePrice: 100,
-      unit: 'kg',
-      category: 'Food Staples',
-      discount: 10
-    },
-    {
-      id: '2',
-      name: 'Tata Tea Premium',
-      image: '/api/placeholder/300/200',
-      retailPrice: 85,
-      wholesalePrice: 70,
-      unit: '500g',
-      category: 'Beverages'
-    },
-    {
-      id: '3',
-      name: 'Fortune Sunflower Oil',
-      image: '/api/placeholder/300/200',
-      retailPrice: 180,
-      wholesalePrice: 165,
-      unit: 'litre',
-      category: 'Food Staples'
-    },
-    {
-      id: '4',
-      name: 'Parle-G Biscuits',
-      image: '/api/placeholder/300/200',
-      retailPrice: 25,
-      unit: 'pack',
-      category: 'Packaged Foods'
-    },
-    {
-      id: '5',
-      name: 'Arhar Dal (Toor)',
-      image: '/api/placeholder/300/200',
-      retailPrice: 150,
-      wholesalePrice: 130,
-      unit: 'kg',
-      category: 'Food Staples'
-    },
-    {
-      id: '6',
-      name: 'Britannia Milk Bikis',
-      image: '/api/placeholder/300/200',
-      retailPrice: 40,
-      unit: 'pack',
-      category: 'Packaged Foods',
-      inStock: false
-    }
-  ];
+  const [selectedCategory, setSelectedCategory] = useState('All Products');
+  const [sortBy, setSortBy] = useState('featured');
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const categories = ['All Products', 'Food Staples', 'Beverages', 'Packaged Foods', 'Tobacco Products'];
+  // Filter and paginate products
+  const { paginatedProducts, totalPages, totalProducts } = useMemo(() => {
+    const filtered = filterProducts(allProducts, searchQuery, selectedCategory, sortBy);
+    const total = filtered.length;
+    const pages = Math.ceil(total / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const paginated = filtered.slice(startIndex, endIndex);
+    
+    return {
+      paginatedProducts: paginated,
+      totalPages: pages,
+      totalProducts: total
+    };
+  }, [searchQuery, selectedCategory, sortBy, currentPage]);
+
+  // Reset to first page when filters change
+  const handleFilterChange = () => {
+    setCurrentPage(1);
+  };
+
+  // Handle page change with scroll to top
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -100,13 +73,13 @@ const Shop = () => {
                 placeholder="Search products..."
                 className="pl-10"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => { setSearchQuery(e.target.value); handleFilterChange(); }}
               />
             </div>
 
             <div className="flex items-center gap-4 w-full lg:w-auto">
               {/* Category Filter */}
-              <Select defaultValue="All Products">
+              <Select value={selectedCategory} onValueChange={(value) => { setSelectedCategory(value); handleFilterChange(); }}>
                 <SelectTrigger className="w-48">
                   <SelectValue />
                 </SelectTrigger>
@@ -120,7 +93,7 @@ const Shop = () => {
               </Select>
 
               {/* Sort */}
-              <Select defaultValue="featured">
+              <Select value={sortBy} onValueChange={(value) => { setSortBy(value); handleFilterChange(); }}>
                 <SelectTrigger className="w-48">
                   <SelectValue />
                 </SelectTrigger>
@@ -161,7 +134,7 @@ const Shop = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <p className="font-body text-muted-foreground">
-              Showing {products.length} products
+              Showing {totalProducts} products
             </p>
           </div>
 
@@ -170,31 +143,70 @@ const Shop = () => {
               ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' 
               : 'grid-cols-1'
           }`}>
-            {products.map((product) => (
-              <ProductCard key={product.id} {...product} />
+            {paginatedProducts.map((product) => (
+              viewMode === 'grid' ? (
+                <ProductCard key={product.id} {...product} />
+              ) : (
+                <div key={product.id} className="flex gap-4 p-4 border rounded-lg bg-white shadow-sm">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-40 h-40 lg:w-48 lg:h-48 object-cover rounded-md"
+                  />
+                  <div className="flex-1">
+                    <h3 className="font-heading font-semibold text-lg mb-2">{product.name}</h3>
+                    <p className="text-muted-foreground text-sm mb-2">{product.description}</p>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <span className="text-xl font-bold text-primary">₹{product.retailPrice}</span>
+                        <span className="text-sm text-muted-foreground">/{product.unit}</span>
+                      </div>
+                      <Button className="bg-primary hover:bg-primary-hover">
+                        Add to Cart
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              )
             ))}
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center mt-12">
-            <div className="flex items-center gap-2">
-              <Button variant="outline" size="sm" disabled>
-                Previous
-              </Button>
-              <Button size="sm" className="bg-primary hover:bg-primary-hover">
-                1
-              </Button>
-              <Button variant="outline" size="sm">
-                2
-              </Button>
-              <Button variant="outline" size="sm">
-                3
-              </Button>
-              <Button variant="outline" size="sm">
-                Next
-              </Button>
+          {totalPages > 1 && (
+            <div className="flex justify-center mt-12">
+              <div className="flex items-center gap-2">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  disabled={currentPage === 1}
+                  onClick={() => handlePageChange(currentPage - 1)}
+                >
+                  Previous
+                </Button>
+                
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <Button
+                    key={page}
+                    size="sm"
+                    variant={currentPage === page ? "default" : "outline"}
+                    className={currentPage === page ? "bg-primary hover:bg-primary-hover" : ""}
+                    onClick={() => handlePageChange(page)}
+                  >
+                    {page}
+                  </Button>
+                ))}
+                
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  disabled={currentPage === totalPages}
+                  onClick={() => handlePageChange(currentPage + 1)}
+                >
+                  Next
+                </Button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
 

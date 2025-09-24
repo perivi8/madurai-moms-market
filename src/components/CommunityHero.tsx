@@ -1,25 +1,28 @@
 import { ArrowRight, ShoppingCart, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import storefrontImage from '@/assets/storefront-hero.jpg';
 
 const CommunityHero = () => {
+  const navigate = useNavigate();
+
   return (
-    <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-cream to-cream/50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative min-h-screen h-screen flex items-center bg-gradient-to-br from-cream to-cream/50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           {/* Hero Content */}
           <div className="space-y-6">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-label font-semibold">
               ✨ Trusted Since 2013
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-heading font-bold text-foreground leading-tight">
+            <h1 className="text-4xl lg:text-6xl xl:text-7xl font-heading font-bold text-foreground leading-tight">
               Serving Madurai
               <span className="block text-primary">Families & Businesses</span>
-              <span className="block text-2xl lg:text-3xl mt-2 text-muted-foreground">Since 2013</span>
+              <span className="block text-2xl lg:text-3xl xl:text-4xl mt-2 text-muted-foreground">Since 2013</span>
             </h1>
             
-            <p className="text-lg font-body text-muted-foreground leading-relaxed max-w-lg">
+            <p className="text-lg lg:text-xl font-body text-muted-foreground leading-relaxed max-w-lg">
               From fresh vegetables to bulk orders for your restaurant - we're your trusted 
               neighborhood grocery store with authentic local service and quality products.
             </p>
@@ -27,8 +30,9 @@ const CommunityHero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
-                className="bg-primary hover:bg-primary-hover text-primary-foreground shadow-button font-label font-semibold px-8 py-3 text-base"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground shadow-button font-label font-semibold px-8 py-4 text-base lg:text-lg"
                 size="lg"
+                onClick={() => navigate('/shop')}
               >
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Shop Groceries
@@ -37,8 +41,9 @@ const CommunityHero = () => {
               
               <Button 
                 variant="outline" 
-                className="border-orange text-orange hover:bg-orange hover:text-orange-foreground font-label font-semibold px-8 py-3 text-base"
+                className="border-orange text-orange hover:bg-orange hover:text-orange-foreground font-label font-semibold px-8 py-4 text-base lg:text-lg"
                 size="lg"
+                onClick={() => navigate('/wholesale')}
               >
                 <Building2 className="mr-2 h-5 w-5" />
                 Wholesale Inquiry
@@ -46,29 +51,29 @@ const CommunityHero = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex items-center gap-8 pt-6 text-sm font-body text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-6 lg:gap-8 pt-6 text-sm lg:text-base font-body text-muted-foreground">
               <div className="flex items-center gap-2">
-                <span className="text-lg">🚚</span>
+                <span className="text-lg lg:text-xl">🚚</span>
                 <span>Free Delivery</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-lg">💳</span>
+                <span className="text-lg lg:text-xl">💳</span>
                 <span>COD + UPI</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-lg">⭐</span>
+                <span className="text-lg lg:text-xl">⭐</span>
                 <span>11+ Years Trusted</span>
               </div>
             </div>
           </div>
 
           {/* Hero Image */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-lg shadow-soft">
+          <div className="relative h-full max-h-[80vh] lg:max-h-[70vh]">
+            <div className="relative overflow-hidden rounded-lg shadow-soft h-full">
               <img
                 src={storefrontImage}
                 alt="Sri Meenakshi Store - Family grocery business in Madurai since 2013"
-                className="w-full h-[400px] lg:h-[500px] object-cover"
+                className="w-full h-full min-h-[400px] lg:min-h-[500px] object-cover"
               />
               
               {/* Overlay Badge */}

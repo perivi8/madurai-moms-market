@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, ShoppingCart, Building2, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CommunityHero from '@/components/CommunityHero';
@@ -9,6 +10,8 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import ProductCard from '@/components/ProductCard';
 
 const Index = () => {
+  const navigate = useNavigate();
+  
   // Mock featured products data
   const featuredProducts = [
     {
@@ -78,7 +81,10 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Button className="bg-primary hover:bg-primary-hover text-primary-foreground font-label font-semibold px-8 py-3">
+            <Button 
+              className="bg-primary hover:bg-primary-hover text-primary-foreground font-label font-semibold px-8 py-3"
+              onClick={() => navigate('/shop')}
+            >
               View All Products
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
