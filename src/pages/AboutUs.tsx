@@ -15,7 +15,7 @@ const AboutUs = () => {
               About Sri Meenakshi Store
             </h1>
             <p className="text-xl font-body text-muted-foreground leading-relaxed">
-              Serving the Madurai community for over two decades with fresh groceries, 
+              Serving the Madurai community since 2016 with fresh groceries, 
               quality products, and exceptional service. We are your trusted neighborhood store.
             </p>
           </div>
@@ -32,28 +32,34 @@ const AboutUs = () => {
               </h2>
               <div className="space-y-4 font-body text-muted-foreground">
                 <p>
-                  Founded in 2003 by Mr. Rajesh Kumar, Sri Meenakshi Store began as a small 
-                  neighborhood grocery shop with a simple mission: to provide fresh, quality 
-                  products to the families of Madurai at affordable prices.
+                  Founded in 2016 by Mr. Mohan Balamurugan, Sri Meenakshi Store began as a dedicated 
+                  neighborhood grocery shop with a clear vision: to provide fresh, quality 
+                  products to the families of Madurai at affordable prices with exceptional service.
                 </p>
                 <p>
-                  What started as a humble 500 sq ft store has now grown into a trusted name 
-                  in the community, serving thousands of families with both retail and wholesale 
-                  grocery needs. We take pride in our personal relationships with customers and 
-                  our commitment to quality.
+                  Under Mr. Mohan Balamurugan's leadership, what started as a community-focused store 
+                  has grown into a trusted name in the Madurai South area, serving hundreds of families 
+                  with both retail and wholesale grocery needs. We take immense pride in our personal 
+                  relationships with customers and our unwavering commitment to quality.
                 </p>
                 <p>
-                  Today, we continue to uphold the same values that founded our store: 
-                  integrity, quality, and service. Every product on our shelves is carefully 
-                  selected to meet our high standards.
+                  Located in the heart of TNHB Colony, Mela Anupanadi, we continue to uphold the same 
+                  values that founded our store: integrity, quality, and exceptional customer service. 
+                  Every product on our shelves is carefully selected by Mr. Mohan Balamurugan himself 
+                  to meet our high standards and serve our community better.
+                </p>
+                <p>
+                  Today, Sri Meenakshi Store stands as a testament to dedication and community service, 
+                  continuously evolving to meet the changing needs of our valued customers while 
+                  maintaining the personal touch that makes us special.
                 </p>
               </div>
             </div>
             <div className="relative">
               <img 
-                src="/api/placeholder/600/400" 
-                alt="Sri Meenakshi Store exterior"
-                className="rounded-lg shadow-lg"
+                src="/about/about.jpg" 
+                alt="Sri Meenakshi Store - Our Story"
+                className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
           </div>
@@ -124,66 +130,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-4">
-              Meet Our Team
-            </h2>
-            <p className="text-lg font-body text-muted-foreground max-w-2xl mx-auto">
-              The dedicated people behind Sri Meenakshi Store
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <img 
-                src="/api/placeholder/200/200" 
-                alt="Rajesh Kumar - Founder"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-heading font-semibold text-foreground mb-1">
-                Rajesh Kumar
-              </h3>
-              <p className="font-body text-primary mb-2">Founder & Owner</p>
-              <p className="font-body text-muted-foreground text-sm">
-                With over 20 years of experience in retail, Rajesh leads our team with passion and dedication.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <img 
-                src="/api/placeholder/200/200" 
-                alt="Priya Sharma - Store Manager"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-heading font-semibold text-foreground mb-1">
-                Priya Sharma
-              </h3>
-              <p className="font-body text-primary mb-2">Store Manager</p>
-              <p className="font-body text-muted-foreground text-sm">
-                Priya ensures smooth operations and maintains our high standards of customer service.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <img 
-                src="/api/placeholder/200/200" 
-                alt="Arjun Patel - Inventory Manager"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-heading font-semibold text-foreground mb-1">
-                Arjun Patel
-              </h3>
-              <p className="font-body text-primary mb-2">Inventory Manager</p>
-              <p className="font-body text-muted-foreground text-sm">
-                Arjun manages our inventory and ensures we always have fresh products in stock.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

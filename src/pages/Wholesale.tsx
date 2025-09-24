@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Building2, Users, Package, Phone, Mail } from 'lucide-react';
+import { Building2, Users, Package, Phone, Mail, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -7,8 +7,10 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Wholesale = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     businessName: '',
     contactName: '',
@@ -29,7 +31,6 @@ const Wholesale = () => {
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -37,6 +38,18 @@ const Wholesale = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange/10 to-primary/10 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back Button - Top Left */}
+          <div className="flex justify-start mb-8">
+            <Button 
+              onClick={() => navigate(-1)}
+              variant="outline"
+              className="flex items-center gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Go Back
+            </Button>
+          </div>
+          
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange/20 text-orange text-sm font-label font-semibold mb-6">
               <Building2 className="mr-2 h-4 w-4" />

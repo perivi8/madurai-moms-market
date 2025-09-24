@@ -1,4 +1,4 @@
-import { RotateCcw, Shield, Clock, CheckCircle, XCircle, AlertTriangle, Phone, Mail } from 'lucide-react';
+import { RotateCcw, Shield, Clock, CheckCircle, XCircle, AlertTriangle, Phone, Mail, ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -33,6 +33,18 @@ const ReturnPolicy = () => {
       {/* Page Header */}
       <section className="bg-cream/30 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back Button - Top Left */}
+          <div className="flex justify-start mb-8">
+            <Button 
+              onClick={() => navigate(-1)}
+              variant="outline"
+              className="flex items-center gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Go Back
+            </Button>
+          </div>
+          
           <div className="text-center max-w-4xl mx-auto">
             <RotateCcw className="h-16 w-16 text-primary mx-auto mb-6" />
             <h1 className="text-5xl font-heading font-bold text-foreground mb-6">
@@ -334,7 +346,7 @@ const ReturnPolicy = () => {
                   Speak directly with our return specialists
                 </p>
                 <div className="font-semibold text-primary mb-4">
-                  +91 98765 43210
+                  +91 96555 86100
                 </div>
                 <div className="text-sm text-muted-foreground">
                   Mon-Sat: 9:00 AM - 7:00 PM
@@ -352,7 +364,7 @@ const ReturnPolicy = () => {
                   Send us your return request details
                 </p>
                 <div className="font-semibold text-primary mb-4">
-                  returns@srimeenakshistore.com
+                  customer@srimeenakshistore.com
                 </div>
                 <div className="text-sm text-muted-foreground">
                   Response within 24 hours

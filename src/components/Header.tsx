@@ -20,7 +20,7 @@ const Header = () => {
 
   // WhatsApp redirect function
   const handleWhatsAppOrder = () => {
-    const phoneNumber = '919876543210'; // Dummy number - replace with actual number later
+    const phoneNumber = '919655586100'; // Sri Meenakshi Store WhatsApp number
     const message = 'Hello! I would like to place an order from Sri Meenakshi Store.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -35,7 +35,7 @@ const Header = () => {
             <h1 className="text-xl font-heading font-bold text-primary hover:text-primary-hover transition-colors">
               Sri Meenakshi Store
             </h1>
-            <span className="ml-2 text-xs text-muted-foreground font-body">Since 2013</span>
+            <span className="ml-2 text-xs text-muted-foreground font-body">Since 2016</span>
           </Link>
 
           {/* Desktop Navigation */}

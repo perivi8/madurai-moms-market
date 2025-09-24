@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Filter, Search, Grid3X3, List } from 'lucide-react';
+import { Filter, Search, Grid3X3, List, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -7,8 +7,10 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
 import { allProducts, categories, filterProducts, getTotalPages } from '@/data/products';
+import { useNavigate } from 'react-router-dom';
 
 const Shop = () => {
+  const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Products');
@@ -89,6 +91,18 @@ const Shop = () => {
       {/* Page Header */}
       <section className="bg-cream/30 py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back Button - Top Left */}
+          <div className="flex justify-start mb-8">
+            <Button 
+              onClick={() => navigate(-1)}
+              variant="outline"
+              className="flex items-center gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Go Back
+            </Button>
+          </div>
+          
           <div className="text-center">
             <h1 className="text-4xl font-heading font-bold text-foreground mb-4">
               Shop Groceries

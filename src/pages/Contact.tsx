@@ -84,9 +84,10 @@ const Contact = () => {
                           Store Address
                         </h3>
                         <p className="font-body text-muted-foreground">
-                          123, Main Street, Anna Nagar<br />
-                          Madurai, Tamil Nadu 625020<br />
-                          India
+                          NO 725, SRI MEENAKSHI STORE<br />
+                          TNHB COLONY, MELA ANUPANADI<br />
+                          MADURAI SOUTH, Madurai<br />
+                          Tamil Nadu, 625009
                         </p>
                       </div>
                     </div>
@@ -104,9 +105,9 @@ const Contact = () => {
                           Phone Numbers
                         </h3>
                         <p className="font-body text-muted-foreground">
-                          Store: +91 98765 43210<br />
-                          Wholesale: +91 98765 43211<br />
-                          WhatsApp: +91 98765 43212
+                          Store: +91 96555 86100<br />
+                          WhatsApp Orders: +91 96555 86100<br />
+                          Customer Support: +91 96555 86100
                         </p>
                       </div>
                     </div>
@@ -124,9 +125,9 @@ const Contact = () => {
                           Email Addresses
                         </h3>
                         <p className="font-body text-muted-foreground">
-                          General: info@srimeenakshistore.com<br />
-                          Orders: orders@srimeenakshistore.com<br />
-                          Support: support@srimeenakshistore.com
+                          General: srimeenakshistore388@gmail.com<br />
+                          Customer Support: customer@srimeenakshistore.com<br />
+                          Orders & Inquiries: srimeenakshistore388@gmail.com
                         </p>
                       </div>
                     </div>

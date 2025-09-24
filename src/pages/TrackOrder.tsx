@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Package, Truck, CheckCircle, Clock, MapPin, Phone } from 'lucide-react';
+import { Search, Package, Truck, CheckCircle, Clock, MapPin, Phone, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,8 +7,10 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const TrackOrder = () => {
+  const navigate = useNavigate();
   const [orderId, setOrderId] = useState('');
   const [orderData, setOrderData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -143,6 +145,18 @@ const TrackOrder = () => {
       {/* Page Header */}
       <section className="bg-cream/30 py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back Button - Top Left */}
+          <div className="flex justify-start mb-8">
+            <Button 
+              onClick={() => navigate(-1)}
+              variant="outline"
+              className="flex items-center gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Go Back
+            </Button>
+          </div>
+          
           <div className="text-center">
             <h1 className="text-4xl font-heading font-bold text-foreground mb-4">
               Track Your Order

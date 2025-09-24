@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-heading font-bold mb-4">Sri Meenakshi Store</h3>
             <p className="text-sm font-body mb-4 opacity-90">
-              Serving Madurai Families & Businesses Since 2013
+              Serving Madurai Families & Businesses Since 2016
             </p>
             <p className="text-xs font-body opacity-80 leading-relaxed">
               A trusted family-run grocery store committed to providing fresh, 
@@ -24,17 +24,18 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm">
                 <Phone className="h-4 w-4 opacity-75" />
-                <span className="font-body">+91 98765 43210</span>
+                <span className="font-body">+91 96555 86100</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 opacity-75" />
-                <span className="font-body">order@srimeenakshistore.com</span>
+                <span className="font-body">srimeenakshistore388@gmail.com</span>
               </div>
               <div className="flex items-start gap-3 text-sm">
                 <MapPin className="h-4 w-4 opacity-75 mt-0.5" />
                 <span className="font-body leading-relaxed">
-                  123 Meenakshi Amman Temple Street<br />
-                  Madurai, Tamil Nadu 625001
+                  NO 725, SRI MEENAKSHI STORE<br />
+                  TNHB COLONY, MELA ANUPANADI<br />
+                  MADURAI SOUTH, Madurai, Tamil Nadu, 625009
                 </span>
               </div>
             </div>
@@ -66,6 +67,7 @@ const Footer = () => {
                 { name: 'Wholesale Orders', href: '/wholesale' },
                 { name: 'Track Your Order', href: '/track-order' },
                 { name: 'Return Policy', href: '/return-policy' },
+                { name: 'Privacy Policy', href: '/privacy-policy' },
               ].map((link) => (
                 <Link
                   key={link.name}
@@ -89,7 +91,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs font-body opacity-80">
-              © 2024 Sri Meenakshi Store. All rights reserved. | Family Business Since 2013
+              © 2024 Sri Meenakshi Store. All rights reserved. | Family Business Since 2016
             </p>
             <div className="flex items-center gap-6 text-xs font-body opacity-80">
               <span>🚚 Free Delivery</span>
