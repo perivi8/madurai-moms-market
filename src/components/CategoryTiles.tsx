@@ -1,7 +1,14 @@
-import { ArrowRight, Wheat, Coffee, Cigarette, Package2 } from 'lucide-react';
+import { ArrowRight, Wheat, Coffee, Package2, Milk, ChefHat, Home, Heart, Baby, Leaf, Cookie, Pill, Candy } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 
 const CategoryTiles = () => {
+  const navigate = useNavigate();
+  
+  const handleCategoryClick = (categoryName: string) => {
+    navigate(`/shop?category=${encodeURIComponent(categoryName)}`);
+  };
+  
   const categories = [
     {
       id: 'food-staples',
@@ -9,7 +16,7 @@ const CategoryTiles = () => {
       description: 'Rice, Wheat, Pulses, Oil',
       icon: Wheat,
       color: 'primary',
-      href: '/shop?category=staples'
+      categoryName: 'Food Staples'
     },
     {
       id: 'beverages',
@@ -17,23 +24,55 @@ const CategoryTiles = () => {
       description: 'Tea, Coffee, Juices, Soft Drinks',
       icon: Coffee,
       color: 'orange',
-      href: '/shop?category=beverages'
+      categoryName: 'Beverages'
     },
     {
-      id: 'tobacco',
-      name: 'Tobacco Products',
-      description: 'Cigarettes, Paan, Gutka',
-      icon: Cigarette,
-      color: 'red',
-      href: '/shop?category=tobacco'
-    },
-    {
-      id: 'packaged',
+      id: 'packaged-foods',
       name: 'Packaged Foods',
       description: 'Snacks, Biscuits, Ready-to-eat',
       icon: Package2,
       color: 'primary',
-      href: '/shop?category=packaged'
+      categoryName: 'Packaged Foods'
+    },
+    {
+      id: 'dairy-products',
+      name: 'Dairy Products',
+      description: 'Milk, Cheese, Yogurt, Butter',
+      icon: Milk,
+      color: 'blue',
+      categoryName: 'Dairy Products'
+    },
+    {
+      id: 'spices',
+      name: 'Spices',
+      description: 'Turmeric, Chili, Garam Masala',
+      icon: ChefHat,
+      color: 'red',
+      categoryName: 'Spices'
+    },
+    {
+      id: 'household',
+      name: 'Household',
+      description: 'Cleaning, Detergents, Utilities',
+      icon: Home,
+      color: 'green',
+      categoryName: 'Household'
+    },
+    {
+      id: 'personal-care',
+      name: 'Personal Care',
+      description: 'Soaps, Shampoo, Skincare',
+      icon: Heart,
+      color: 'pink',
+      categoryName: 'Personal Care'
+    },
+    {
+      id: 'baby-care',
+      name: 'Baby Care',
+      description: 'Diapers, Baby Food, Care Products',
+      icon: Baby,
+      color: 'purple',
+      categoryName: 'Baby Care'
     }
   ];
 
@@ -41,7 +80,11 @@ const CategoryTiles = () => {
     const colorMap = {
       primary: 'bg-primary/10 text-primary border-primary/20 hover:bg-primary/20',
       orange: 'bg-orange/10 text-orange border-orange/20 hover:bg-orange/20',
-      red: 'bg-red/10 text-red border-red/20 hover:bg-red/20'
+      red: 'bg-red-500/10 text-red-600 border-red-200 hover:bg-red-500/20',
+      blue: 'bg-blue-500/10 text-blue-600 border-blue-200 hover:bg-blue-500/20',
+      green: 'bg-green-500/10 text-green-600 border-green-200 hover:bg-green-500/20',
+      pink: 'bg-pink-500/10 text-pink-600 border-pink-200 hover:bg-pink-500/20',
+      purple: 'bg-purple-500/10 text-purple-600 border-purple-200 hover:bg-purple-500/20'
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.primary;
   };
@@ -64,6 +107,7 @@ const CategoryTiles = () => {
             return (
               <Card
                 key={category.id}
+                onClick={() => handleCategoryClick(category.categoryName)}
                 className={`group cursor-pointer border-2 transition-all duration-300 hover:shadow-product ${getColorClasses(category.color)}`}
               >
                 <CardContent className="p-6 text-center space-y-4">

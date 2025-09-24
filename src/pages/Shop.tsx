@@ -7,16 +7,29 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
 import { allProducts, categories, filterProducts, getTotalPages } from '@/data/products';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const Shop = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Products');
   const [sortBy, setSortBy] = useState('featured');
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
+
+  // Handle URL parameters on component mount
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam) {
+      // Decode the category parameter and set it
+      const decodedCategory = decodeURIComponent(categoryParam);
+      if (categories.includes(decodedCategory)) {
+        setSelectedCategory(decodedCategory);
+      }
+    }
+  }, [searchParams]);
 
   // Calculate items per page based on screen size
   useEffect(() => {
