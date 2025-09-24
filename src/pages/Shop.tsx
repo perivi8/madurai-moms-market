@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Filter, Search, Grid3X3, List } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,22 +8,60 @@ import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
 import { allProducts, categories, filterProducts, getTotalPages } from '@/data/products';
 
-const ITEMS_PER_PAGE = 8;
-
 const Shop = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Products');
   const [sortBy, setSortBy] = useState('featured');
   const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(8);
+
+  // Calculate items per page based on screen size
+  useEffect(() => {
+    const calculateItemsPerPage = () => {
+      if (viewMode === 'list') {
+        // For list view, always show 6 items per page
+        setItemsPerPage(6);
+        return;
+      }
+
+      const width = window.innerWidth;
+      let itemsPerRow = 4; // Default for large screens (xl:grid-cols-4)
+      
+      if (width < 640) {
+        // Mobile: grid-cols-1
+        itemsPerRow = 1;
+      } else if (width < 1024) {
+        // Tablet: sm:grid-cols-2
+        itemsPerRow = 2;
+      } else if (width < 1280) {
+        // Desktop: lg:grid-cols-3
+        itemsPerRow = 3;
+      } else {
+        // Large Desktop: xl:grid-cols-4
+        itemsPerRow = 4;
+      }
+      
+      // Show 2 rows worth of products
+      const newItemsPerPage = itemsPerRow * 2;
+      setItemsPerPage(newItemsPerPage);
+      // Reset to first page when items per page changes
+      setCurrentPage(1);
+    };
+
+    calculateItemsPerPage();
+    window.addEventListener('resize', calculateItemsPerPage);
+    
+    return () => window.removeEventListener('resize', calculateItemsPerPage);
+  }, [viewMode]);
 
   // Filter and paginate products
   const { paginatedProducts, totalPages, totalProducts } = useMemo(() => {
     const filtered = filterProducts(allProducts, searchQuery, selectedCategory, sortBy);
     const total = filtered.length;
-    const pages = Math.ceil(total / ITEMS_PER_PAGE);
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const pages = Math.ceil(total / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
     const paginated = filtered.slice(startIndex, endIndex);
     
     return {
@@ -31,7 +69,7 @@ const Shop = () => {
       totalPages: pages,
       totalProducts: total
     };
-  }, [searchQuery, selectedCategory, sortBy, currentPage]);
+  }, [searchQuery, selectedCategory, sortBy, currentPage, itemsPerPage]);
 
   // Reset to first page when filters change
   const handleFilterChange = () => {
@@ -134,7 +172,7 @@ const Shop = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <p className="font-body text-muted-foreground">
-              Showing {totalProducts} products
+              Showing {paginatedProducts.length} of {totalProducts} products ({itemsPerPage} per page)
             </p>
           </div>
 
