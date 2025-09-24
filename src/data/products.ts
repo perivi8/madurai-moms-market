@@ -5,7 +5,7 @@ export const allProducts: Product[] = [
   {
     id: '1',
     name: 'Premium Basmati Rice',
-    image: '/api/placeholder/300/200',
+    image: '/shop/1.jpg',
     retailPrice: 120,
     wholesalePrice: 100,
     unit: 'kg',
@@ -17,7 +17,7 @@ export const allProducts: Product[] = [
   {
     id: '2',
     name: 'Tata Tea Premium',
-    image: '/api/placeholder/300/200',
+    image: '/shop/2.jpg',
     retailPrice: 85,
     wholesalePrice: 70,
     unit: '500g',
@@ -28,7 +28,7 @@ export const allProducts: Product[] = [
   {
     id: '3',
     name: 'Fortune Sunflower Oil',
-    image: '/api/placeholder/300/200',
+    image: '/shop/3.jpg',
     retailPrice: 180,
     wholesalePrice: 165,
     unit: 'litre',
@@ -39,7 +39,7 @@ export const allProducts: Product[] = [
   {
     id: '4',
     name: 'Parle-G Biscuits',
-    image: '/api/placeholder/300/200',
+    image: '/shop/4.jpg',
     retailPrice: 25,
     unit: 'pack',
     category: 'Packaged Foods',
@@ -49,7 +49,7 @@ export const allProducts: Product[] = [
   {
     id: '5',
     name: 'Arhar Dal (Toor)',
-    image: '/api/placeholder/300/200',
+    image: '/shop/5.jpg',
     retailPrice: 150,
     wholesalePrice: 130,
     unit: 'kg',
@@ -60,7 +60,7 @@ export const allProducts: Product[] = [
   {
     id: '6',
     name: 'Britannia Milk Bikis',
-    image: '/api/placeholder/300/200',
+    image: '/shop/6.jpg',
     retailPrice: 40,
     unit: 'pack',
     category: 'Packaged Foods',
@@ -70,7 +70,7 @@ export const allProducts: Product[] = [
   {
     id: '7',
     name: 'Amul Fresh Milk',
-    image: '/api/placeholder/300/200',
+    image: '/shop/7.jpg',
     retailPrice: 30,
     wholesalePrice: 28,
     unit: '500ml',
@@ -81,7 +81,7 @@ export const allProducts: Product[] = [
   {
     id: '8',
     name: 'MDH Garam Masala',
-    image: '/api/placeholder/300/200',
+    image: '/shop/8.jpg',
     retailPrice: 45,
     wholesalePrice: 40,
     unit: '100g',
@@ -94,7 +94,7 @@ export const allProducts: Product[] = [
   {
     id: '9',
     name: 'Surf Excel Detergent',
-    image: '/api/placeholder/300/200',
+    image: '/shop/9.jpg',
     retailPrice: 95,
     wholesalePrice: 85,
     unit: '1kg',
@@ -105,7 +105,7 @@ export const allProducts: Product[] = [
   {
     id: '10',
     name: 'Maggi 2-Minute Noodles',
-    image: '/api/placeholder/300/200',
+    image: '/shop/10.jpg',
     retailPrice: 15,
     unit: 'pack',
     category: 'Packaged Foods',
@@ -115,7 +115,7 @@ export const allProducts: Product[] = [
   {
     id: '11',
     name: 'Colgate Toothpaste',
-    image: '/api/placeholder/300/200',
+    image: '/shop/11.jpg',
     retailPrice: 55,
     wholesalePrice: 48,
     unit: '200g',
@@ -126,7 +126,7 @@ export const allProducts: Product[] = [
   {
     id: '12',
     name: 'Aashirvaad Atta',
-    image: '/api/placeholder/300/200',
+    image: '/shop/12.jpg',
     retailPrice: 220,
     wholesalePrice: 200,
     unit: '5kg',
@@ -138,7 +138,7 @@ export const allProducts: Product[] = [
   {
     id: '13',
     name: 'Nestle Cerelac',
-    image: '/api/placeholder/300/200',
+    image: '/shop/13.jpg',
     retailPrice: 185,
     wholesalePrice: 170,
     unit: '300g',
@@ -149,7 +149,7 @@ export const allProducts: Product[] = [
   {
     id: '14',
     name: 'Lux Soap',
-    image: '/api/placeholder/300/200',
+    image: '/shop/14.jpg',
     retailPrice: 35,
     wholesalePrice: 30,
     unit: '125g',
@@ -160,7 +160,7 @@ export const allProducts: Product[] = [
   {
     id: '15',
     name: 'Red Label Tea',
-    image: '/api/placeholder/300/200',
+    image: '/shop/15.jpg',
     retailPrice: 75,
     wholesalePrice: 65,
     unit: '500g',
@@ -171,7 +171,7 @@ export const allProducts: Product[] = [
   {
     id: '16',
     name: 'Clinic Plus Shampoo',
-    image: '/api/placeholder/300/200',
+    image: '/shop/16.jpg',
     retailPrice: 65,
     wholesalePrice: 58,
     unit: '350ml',
@@ -184,7 +184,7 @@ export const allProducts: Product[] = [
   {
     id: '17',
     name: 'Kissan Mixed Fruit Jam',
-    image: '/api/placeholder/300/200',
+    image: '/shop/17.jpg',
     retailPrice: 85,
     wholesalePrice: 78,
     unit: '500g',
@@ -195,7 +195,7 @@ export const allProducts: Product[] = [
   {
     id: '18',
     name: 'Vim Dishwash Bar',
-    image: '/api/placeholder/300/200',
+    image: '/shop/18.jpg',
     retailPrice: 25,
     wholesalePrice: 22,
     unit: '300g',
@@ -206,7 +206,7 @@ export const allProducts: Product[] = [
   {
     id: '19',
     name: 'Bournvita Health Drink',
-    image: '/api/placeholder/300/200',
+    image: '/shop/19.jpg',
     retailPrice: 195,
     wholesalePrice: 180,
     unit: '500g',
@@ -217,7 +217,7 @@ export const allProducts: Product[] = [
   {
     id: '20',
     name: 'Patanjali Honey',
-    image: '/api/placeholder/300/200',
+    image: '/shop/20.jpg',
     retailPrice: 125,
     wholesalePrice: 115,
     unit: '500g',
@@ -228,7 +228,7 @@ export const allProducts: Product[] = [
   {
     id: '21',
     name: 'Lizol Floor Cleaner',
-    image: '/api/placeholder/300/200',
+    image: '/shop/21.jpg',
     retailPrice: 85,
     wholesalePrice: 78,
     unit: '500ml',
@@ -239,7 +239,7 @@ export const allProducts: Product[] = [
   {
     id: '22',
     name: 'Haldiram Bhujia',
-    image: '/api/placeholder/300/200',
+    image: '/shop/22.jpg',
     retailPrice: 45,
     unit: '200g',
     category: 'Snacks',
@@ -249,7 +249,7 @@ export const allProducts: Product[] = [
   {
     id: '23',
     name: 'Dettol Antiseptic',
-    image: '/api/placeholder/300/200',
+    image: '/shop/23.jpg',
     retailPrice: 95,
     wholesalePrice: 88,
     unit: '250ml',
@@ -260,7 +260,7 @@ export const allProducts: Product[] = [
   {
     id: '24',
     name: 'Cadbury Dairy Milk',
-    image: '/api/placeholder/300/200',
+    image: '/shop/24.jpg',
     retailPrice: 35,
     unit: '55g',
     category: 'Confectionery',
