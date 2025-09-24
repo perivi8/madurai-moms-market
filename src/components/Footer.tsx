@@ -28,7 +28,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 opacity-75" />
-                <span className="font-body">srimeenakshistore388@gmail.com</span>
+                <span className="font-body">contact@srimeenakshi.store</span>
               </div>
               <div className="flex items-start gap-3 text-sm">
                 <MapPin className="h-4 w-4 opacity-75 mt-0.5" />
@@ -64,10 +64,9 @@ const Footer = () => {
             <div className="space-y-2">
               {[
                 { name: 'Shop Groceries', href: '/shop' },
-                { name: 'Wholesale Orders', href: '/wholesale' },
-                { name: 'Track Your Order', href: '/track-order' },
-                { name: 'Return Policy', href: '/return-policy' },
-                { name: 'Privacy Policy', href: '/privacy-policy' },
+                { name: 'Wholesale', href: '/wholesale' },
+                { name: 'About Us', href: '/about' },
+                { name: 'Contact Us', href: '/contact' },
               ].map((link) => (
                 <Link
                   key={link.name}
@@ -91,12 +90,21 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs font-body opacity-80">
-              © 2024 Sri Meenakshi Store. All rights reserved. | Family Business Since 2016
+              © 2025 Sri Meenakshi Store. All rights reserved. | Family Business Since 2016
             </p>
-            <div className="flex items-center gap-6 text-xs font-body opacity-80">
-              <span>🚚 Free Delivery</span>
-              <span>💳 COD Available</span>
-              <span>📱 UPI Accepted</span>
+            <div className="flex flex-wrap items-center gap-4 text-xs font-body opacity-80">
+              <Link to="/privacy-policy" className="hover:opacity-100 transition-opacity">
+                Privacy Policy
+              </Link>
+              <Link to="/terms-conditions" className="hover:opacity-100 transition-opacity">
+                Terms & Conditions
+              </Link>
+              <Link to="/shipping-delivery" className="hover:opacity-100 transition-opacity">
+                Shipping & Delivery
+              </Link>
+              <Link to="/cancellation-refund" className="hover:opacity-100 transition-opacity">
+                Cancellation & Refund
+              </Link>
             </div>
           </div>
         </div>

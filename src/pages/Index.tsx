@@ -172,6 +172,7 @@ const Index = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
+              onClick={() => navigate('/shop')}
               className="bg-white text-primary hover:bg-cream font-label font-semibold px-8 py-3 text-base"
               size="lg"
             >
@@ -180,6 +181,7 @@ const Index = () => {
             </Button>
             
             <Button 
+              onClick={() => navigate('/wholesale')}
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-primary font-label font-semibold px-8 py-3 text-base"
               size="lg"

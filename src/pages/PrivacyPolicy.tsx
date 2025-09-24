@@ -34,7 +34,13 @@ const PrivacyPolicy = () => {
               Privacy Policy
             </h1>
             <p className="text-xl font-body text-muted-foreground leading-relaxed">
-              Your privacy is important to us. Learn how we collect, use, and protect your personal information.
+              Your Privacy, Our Responsibility
+            </p>
+            <p className="text-lg font-body text-muted-foreground mt-4">
+              At Sri Meenakshi Store, we value your trust and are committed to protecting your personal information. Whether you shop with us in-store or place an order online, we ensure that your data is handled securely, transparently, and in compliance with applicable Indian IT laws and global best practices.
+            </p>
+            <p className="text-base font-body text-muted-foreground mt-4">
+              This Privacy Policy explains what data we collect, how we use it, how we safeguard it, and the rights you have as our customer.
             </p>
           </div>
         </div>
@@ -99,22 +105,33 @@ const PrivacyPolicy = () => {
                   <h3 className="font-heading font-semibold text-foreground mb-3">
                     Personal Information
                   </h3>
+                  <p className="text-muted-foreground mb-4">
+                    When you purchase groceries, place an online order, or contact us, we may collect the following information:
+                  </p>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Name, email address, and phone number when you create an account
+                      Full Name
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Delivery address and payment information for order processing
+                      Email Address & Phone Number
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Communication preferences and customer service interactions
+                      Billing & Shipping Address
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Order history and shopping preferences to improve your experience
+                      Order & Transaction Details
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Payment Information (processed through secure third-party gateways)
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Delivery Preferences
                     </li>
                   </ul>
                 </div>
@@ -128,17 +145,16 @@ const PrivacyPolicy = () => {
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Device information, IP address, and browser type
+                      Device & Browser Information (for online shoppers)
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Website usage patterns and navigation behavior
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Cookies and similar tracking technologies for functionality
+                      Cookies & Analytics Data (to improve site performance and customer experience)
                     </li>
                   </ul>
+                  <p className="text-muted-foreground mt-4">
+                    We only collect information necessary to fulfill your order and provide a smooth shopping experience.
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -153,53 +169,43 @@ const PrivacyPolicy = () => {
               <CardContent className="space-y-6">
                 <div>
                   <h3 className="font-heading font-semibold text-foreground mb-3">
-                    Service Provision
+                    Why We Collect Your Information
                   </h3>
+                  <p className="text-muted-foreground mb-4">
+                    Your data is used solely for:
+                  </p>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Process and fulfill your grocery orders and deliveries
+                      Processing and fulfilling your grocery orders
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Provide customer support and respond to your inquiries
+                      Coordinating delivery or pickup services
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Send order confirmations, delivery updates, and important notices
+                      Providing after-sales support or resolving issues
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Manage your account and maintain our customer database
+                      Managing wholesale/B2B customer relationships (if applicable)
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Sending promotional updates and offers (only if you opt in)
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Complying with taxation and regulatory requirements
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Improving our website, services, and product offerings
                     </li>
                   </ul>
                 </div>
 
-                <Separator />
-
-                <div>
-                  <h3 className="font-heading font-semibold text-foreground mb-3">
-                    Business Operations
-                  </h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Improve our products, services, and website functionality
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Analyze shopping trends and customer preferences
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Send promotional offers and newsletters (with your consent)
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Prevent fraud and ensure the security of our platform
-                    </li>
-                  </ul>
-                </div>
               </CardContent>
             </Card>
 
@@ -213,49 +219,31 @@ const PrivacyPolicy = () => {
               <CardContent className="space-y-6">
                 <div>
                   <h3 className="font-heading font-semibold text-foreground mb-3">
-                    Security Measures
+                    How We Protect Your Information
                   </h3>
+                  <p className="text-muted-foreground mb-4">
+                    We adopt strict security measures to ensure your personal information is kept safe:
+                  </p>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      SSL encryption for all data transmission and storage
+                      <strong>SSL Encryption:</strong> All online transactions are encrypted.
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Regular security audits and system updates
+                      <strong>Secure Payment Handling:</strong> Payment details are never stored; they are managed through trusted, PCI-compliant third-party providers.
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Restricted access to personal information on a need-to-know basis
+                      <strong>Controlled Access:</strong> Only authorized staff handle sensitive customer data.
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Secure payment processing through trusted third-party providers
+                      <strong>Data Reviews:</strong> Regular audits are conducted to maintain security standards.
                     </li>
                   </ul>
                 </div>
 
-                <Separator />
-
-                <div>
-                  <h3 className="font-heading font-semibold text-foreground mb-3">
-                    Data Retention
-                  </h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Personal information is retained only as long as necessary
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Order history maintained for 3 years for customer service
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Account information deleted upon request (subject to legal requirements)
-                    </li>
-                  </ul>
-                </div>
               </CardContent>
             </Card>
 
@@ -269,24 +257,59 @@ const PrivacyPolicy = () => {
               <CardContent className="space-y-6">
                 <div>
                   <h3 className="font-heading font-semibold text-foreground mb-3">
-                    Data Rights
+                    Your Rights & Choices
                   </h3>
+                  <p className="text-muted-foreground mb-4">
+                    As our customer, you have the right to:
+                  </p>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Access and review your personal information at any time
+                      Access the information we hold about you
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Request correction of inaccurate or incomplete data
+                      Request corrections or updates to your details
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Delete your account and associated personal information
+                      Request deletion of your personal data (where legally permitted)
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Opt-out of marketing communications at any time
+                      Opt out of promotional messages at any time
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Raise concerns regarding privacy or data misuse
+                    </li>
+                  </ul>
+                  <p className="text-muted-foreground mt-4">
+                    We will respond to such requests within 30 business days.
+                  </p>
+                </div>
+
+                <Separator />
+
+                <div>
+                  <h3 className="font-heading font-semibold text-foreground mb-3">
+                    Third-Party Sharing
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    We do not sell or rent customer information. Your data is only shared with:
+                  </p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Delivery/logistics partners for order fulfillment
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Payment gateway providers for transaction processing
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Government/regulatory authorities when legally required
                     </li>
                   </ul>
                 </div>
@@ -295,22 +318,11 @@ const PrivacyPolicy = () => {
 
                 <div>
                   <h3 className="font-heading font-semibold text-foreground mb-3">
-                    Cookie Preferences
+                    Policy Updates
                   </h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Essential cookies for website functionality (cannot be disabled)
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Analytics cookies to improve our services (optional)
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      Marketing cookies for personalized offers (optional)
-                    </li>
-                  </ul>
+                  <p className="text-muted-foreground">
+                    We may update this Privacy Policy occasionally to reflect business, legal, or technological changes. Updates will always be posted on this page with a revised "Last Updated" date.
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -359,7 +371,7 @@ const PrivacyPolicy = () => {
                   Send us your privacy concerns
                 </p>
                 <div className="font-semibold text-primary mb-4">
-                  customer@srimeenakshistore.com
+                  contact@srimeenakshi.store
                 </div>
                 <div className="text-sm text-muted-foreground">
                   Response within 24 hours
@@ -384,10 +396,10 @@ const PrivacyPolicy = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
-              This Privacy Policy was last updated on September 24, 2024
+              Last Updated: August 2025
             </p>
             <p className="text-sm text-muted-foreground mt-2">
-              © 2024 Sri Meenakshi Store. All rights reserved.
+              © 2025 Sri Meenakshi Store. All Rights Reserved.
             </p>
           </div>
         </div>

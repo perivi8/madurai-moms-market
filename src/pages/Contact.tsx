@@ -125,9 +125,9 @@ const Contact = () => {
                           Email Addresses
                         </h3>
                         <p className="font-body text-muted-foreground">
-                          General: srimeenakshistore388@gmail.com<br />
-                          Customer Support: customer@srimeenakshistore.com<br />
-                          Orders & Inquiries: srimeenakshistore388@gmail.com
+                          General: contact@srimeenakshi.store<br />
+                          Customer Support: contact@srimeenakshi.store<br />
+                          Orders & Inquiries: contact@srimeenakshi.store
                         </p>
                       </div>
                     </div>
