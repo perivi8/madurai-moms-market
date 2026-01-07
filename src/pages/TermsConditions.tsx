@@ -45,7 +45,7 @@ const TermsConditions = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-sm text-muted-foreground font-semibold">
-              Last Updated: August 2025
+              Last Updated: August 2018
             </p>
           </div>
         </div>
@@ -374,7 +374,7 @@ const TermsConditions = () => {
               📍 No:725, TNHB Colony, Mela Anupandi, Madurai South, Tamil Nadu – 625009
             </p>
             <p className="text-sm text-muted-foreground mt-4">
-              © 2025 Sri Meenakshi Store. All Rights Reserved.
+              © 2018 Sri Meenakshi Store. All Rights Reserved.
             </p>
           </div>
         </div>

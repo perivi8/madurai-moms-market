@@ -21,8 +21,8 @@ const TrackOrder = () => {
     'ORD1703123456789': {
       orderId: 'ORD1703123456789',
       status: 'out_for_delivery',
-      orderDate: '2024-01-15T10:30:00Z',
-      estimatedDelivery: '2024-01-17T18:00:00Z',
+      orderDate: '2018-01-15T10:30:00Z',
+      estimatedDelivery: '2018-01-17T18:00:00Z',
       items: [
         { name: 'Premium Basmati Rice', quantity: 2, price: 240 },
         { name: 'Tata Tea Premium', quantity: 1, price: 85 }
@@ -34,10 +34,10 @@ const TrackOrder = () => {
         phone: '+91 98765 43210'
       },
       timeline: [
-        { status: 'confirmed', time: '2024-01-15T10:30:00Z', message: 'Order confirmed' },
-        { status: 'processing', time: '2024-01-15T14:00:00Z', message: 'Order is being prepared' },
-        { status: 'shipped', time: '2024-01-16T09:00:00Z', message: 'Order shipped from warehouse' },
-        { status: 'out_for_delivery', time: '2024-01-17T08:00:00Z', message: 'Out for delivery' }
+        { status: 'confirmed', time: '2018-01-15T10:30:00Z', message: 'Order confirmed' },
+        { status: 'processing', time: '2018-01-15T14:00:00Z', message: 'Order is being prepared' },
+        { status: 'shipped', time: '2018-01-16T09:00:00Z', message: 'Order shipped from warehouse' },
+        { status: 'out_for_delivery', time: '2018-01-17T08:00:00Z', message: 'Out for delivery' }
       ],
       deliveryAgent: {
         name: 'Ravi Kumar',

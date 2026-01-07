@@ -13,13 +13,13 @@ const CommunityHero = () => {
           {/* Hero Content */}
           <div className="space-y-6">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-label font-semibold">
-              ✨ Trusted Since 2013
+              ✨ Trusted Since 2018
             </div>
             
             <h1 className="text-4xl lg:text-6xl xl:text-7xl font-heading font-bold text-foreground leading-tight">
               Serving Madurai
               <span className="block text-primary">Families & Businesses</span>
-              <span className="block text-2xl lg:text-3xl xl:text-4xl mt-2 text-muted-foreground">Since 2013</span>
+              <span className="block text-2xl lg:text-3xl xl:text-4xl mt-2 text-muted-foreground">Since 2018</span>
             </h1>
             
             <p className="text-lg lg:text-xl font-body text-muted-foreground leading-relaxed max-w-lg">
@@ -62,7 +62,7 @@ const CommunityHero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-lg lg:text-xl">⭐</span>
-                <span>11+ Years Trusted</span>
+                <span>8+ Years Trusted</span>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ const CommunityHero = () => {
             <div className="relative overflow-hidden rounded-lg shadow-soft h-full">
               <img
                 src={storefrontImage}
-                alt="Sri Meenakshi Store - Family grocery business in Madurai since 2013"
+                alt="Sri Meenakshi Store - Family grocery business in Madurai since 2018"
                 className="w-full h-full min-h-[400px] lg:min-h-[500px] object-cover"
               />
               

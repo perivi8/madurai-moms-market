@@ -397,7 +397,7 @@ const ShippingDelivery = () => {
               📍 No:725, TNHB Colony, Mela Anupandi, Madurai South, Tamil Nadu – 625009
             </p>
             <p className="text-sm text-muted-foreground mt-4">
-              Last Updated: August 2025 | © 2025 Sri Meenakshi Store. All Rights Reserved.
+              Last Updated: August 2018 | © 2018 Sri Meenakshi Store. All Rights Reserved.
             </p>
           </div>
         </div>

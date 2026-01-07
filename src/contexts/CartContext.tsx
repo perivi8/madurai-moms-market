@@ -35,16 +35,19 @@ const CartContext = createContext<{
 } | null>(null);
 
 const cartReducer = (state: CartState, action: CartAction): CartState => {
+  // Ensure state.items is always an array
+  const items = Array.isArray(state.items) ? state.items : [];
+  
   switch (action.type) {
     case 'ADD_ITEM': {
       const { product, priceType } = action.payload;
-      const existingItemIndex = state.items.findIndex(
+      const existingItemIndex = items.findIndex(
         item => item.id === product.id && item.selectedPrice === priceType
       );
 
       let newItems;
       if (existingItemIndex >= 0) {
-        newItems = [...state.items];
+        newItems = [...items];
         newItems[existingItemIndex].quantity += 1;
       } else {
         const newItem: CartItem = {
@@ -52,7 +55,7 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
           quantity: 1,
           selectedPrice: priceType,
         };
-        newItems = [...state.items, newItem];
+        newItems = [...items, newItem];
       }
 
       const total = newItems.reduce((sum, item) => {
@@ -64,7 +67,7 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
     }
 
     case 'REMOVE_ITEM': {
-      const newItems = state.items.filter(item => item.id !== action.payload);
+      const newItems = items.filter(item => item.id !== action.payload);
       const total = newItems.reduce((sum, item) => {
         const price = item.selectedPrice === 'wholesale' ? item.wholesalePrice || item.retailPrice : item.retailPrice;
         return sum + (price * item.quantity);
@@ -75,10 +78,10 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
     case 'UPDATE_QUANTITY': {
       const { id, quantity } = action.payload;
       if (quantity <= 0) {
-        return cartReducer(state, { type: 'REMOVE_ITEM', payload: id });
+        return cartReducer({ ...state, items }, { type: 'REMOVE_ITEM', payload: id });
       }
 
-      const newItems = state.items.map(item =>
+      const newItems = items.map(item =>
         item.id === id ? { ...item, quantity } : item
       );
 

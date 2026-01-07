@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-heading font-bold mb-4">Sri Meenakshi Store</h3>
             <p className="text-sm font-body mb-4 opacity-90">
-              Serving Madurai Families & Businesses Since 2016
+              Serving Madurai Families & Businesses Since 2018
             </p>
             <p className="text-xs font-body opacity-80 leading-relaxed">
               A trusted family-run grocery store committed to providing fresh, 
@@ -52,12 +52,12 @@ const Footer = () => {
               <div className="flex items-center gap-3 text-sm">
                 <Clock className="h-4 w-4 opacity-75" />
                 <div className="font-body">
-                  <div>Monday - Saturday</div>
-                  <div className="opacity-90">8:00 AM - 8:00 PM</div>
+                  <div>Monday - Sunday</div>
+                  <div className="opacity-90">8:00 AM - 10:00 PM</div>
                 </div>
               </div>
               <div className="text-sm font-body mt-2">
-                <div>Sunday: 8:00 AM - 2:00 PM</div>
+                <div>(Open 7 days a week)</div>
               </div>
             </div>
           </div>
@@ -82,11 +82,7 @@ const Footer = () => {
               ))}
             </div>
             
-            {/* Social Media */}
-            <div className="flex items-center gap-4 mt-6">
-              <Facebook className="h-5 w-5 opacity-75 hover:opacity-100 cursor-pointer transition-opacity" />
-              <Instagram className="h-5 w-5 opacity-75 hover:opacity-100 cursor-pointer transition-opacity" />
-            </div>
+
           </div>
         </div>
 
@@ -94,7 +90,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs font-body opacity-80">
-              © 2025 Sri Meenakshi Store. All rights reserved. | Family Business Since 2016
+              © 2018 Sri Meenakshi Store. All rights reserved. | Family Business Since 2018
             </p>
             <div className="flex flex-wrap items-center gap-4 text-xs font-body opacity-80">
               <Link to="/privacy-policy" className="hover:opacity-100 transition-opacity">

@@ -9,6 +9,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const { state } = useCart();
+  const cartItemsCount = state?.items?.length || 0;
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -35,7 +36,7 @@ const Header = () => {
             <h1 className="text-xl font-heading font-bold text-primary hover:text-primary-hover transition-colors">
               Sri Meenakshi Store
             </h1>
-            <span className="ml-2 text-xs text-muted-foreground font-body">Since 2016</span>
+            <span className="ml-2 text-xs text-muted-foreground font-body">Since 2018</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -78,9 +79,9 @@ const Header = () => {
               onClick={() => navigate('/cart')}
             >
               <ShoppingCart className="h-4 w-4" />
-              {state.items.length > 0 && (
+              {cartItemsCount > 0 && (
                 <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center bg-orange text-orange-foreground text-xs">
-                  {state.items.length}
+                  {cartItemsCount}
                 </Badge>
               )}
             </Button>

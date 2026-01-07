@@ -145,9 +145,9 @@ const Contact = () => {
                           Store Hours
                         </h3>
                         <p className="font-body text-muted-foreground">
-                          Monday - Saturday: 7:00 AM - 9:00 PM<br />
-                          Sunday: 8:00 AM - 8:00 PM<br />
-                          Public Holidays: 9:00 AM - 6:00 PM
+                          Monday - Sunday: 8:00 AM - 10:00 PM<br />
+                          (Open 7 days a week)<br />
+                          Public Holidays: 8:00 AM - 10:00 PM
                         </p>
                       </div>
                     </div>

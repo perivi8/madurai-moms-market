@@ -8,7 +8,7 @@ const TestimonialsSection = () => {
       name: 'Priya Rajesh',
       role: 'Regular Customer',
       location: 'Madurai',
-      content: 'Sri Meenakshi Store has been our go-to grocery shop for 5 years. The quality is always fresh, and they know exactly what our family needs. The home delivery service is a lifesaver!',
+      content: 'Sri Meenakshi Store has been our go-to grocery shop for 8 years. The quality is always fresh, and they know exactly what our family needs. The home delivery service is a lifesaver!',
       rating: 5,
       image: '👩‍🦳'
     },
@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
             <div className="text-sm font-body text-muted-foreground">Business Partners</div>
           </div>
           <div>
-            <div className="text-2xl font-heading font-bold text-primary mb-2">11</div>
+            <div className="text-2xl font-heading font-bold text-primary mb-2">8</div>
             <div className="text-sm font-body text-muted-foreground">Years of Service</div>
           </div>
           <div>

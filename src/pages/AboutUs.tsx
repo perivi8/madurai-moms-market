@@ -15,7 +15,7 @@ const AboutUs = () => {
               About Sri Meenakshi Store
             </h1>
             <p className="text-xl font-body text-muted-foreground leading-relaxed">
-              Serving the Madurai community since 2016 with fresh groceries, 
+              Serving the Madurai community since 2018 with fresh groceries, 
               quality products, and exceptional service. We are your trusted neighborhood store.
             </p>
           </div>
@@ -32,7 +32,7 @@ const AboutUs = () => {
               </h2>
               <div className="space-y-4 font-body text-muted-foreground">
                 <p>
-                  Founded in 2016 by Mr. Mohan Balamurugan, Sri Meenakshi Store began as a dedicated 
+                  Founded in 2018 by Mr. Mohan Balamurugan, Sri Meenakshi Store began as a dedicated 
                   neighborhood grocery shop with a clear vision: to provide fresh, quality 
                   products to the families of Madurai at affordable prices with exceptional service.
                 </p>

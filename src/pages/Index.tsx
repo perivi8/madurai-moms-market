@@ -107,7 +107,7 @@ const Index = () => {
               
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
-                  Since 2013, Sri Meenakshi Store has been more than just a grocery shop - 
+                  Since 2018, Sri Meenakshi Store has been more than just a grocery shop - 
                   we're part of the Madurai community. What started as a small family business 
                   has grown into a trusted destination for both households and local businesses.
                 </p>
@@ -138,7 +138,7 @@ const Index = () => {
               <div className="bg-gradient-to-br from-primary/10 to-orange/10 rounded-lg p-8 text-center">
                 <div className="text-6xl mb-4">🏪</div>
                 <h3 className="text-xl font-heading font-bold text-foreground mb-4">
-                  Heritage Since 2013
+                  Heritage Since 2018
                 </h3>
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>

@@ -396,10 +396,10 @@ const PrivacyPolicy = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
-              Last Updated: August 2025
+              Last Updated: August 2018
             </p>
             <p className="text-sm text-muted-foreground mt-2">
-              © 2025 Sri Meenakshi Store. All Rights Reserved.
+              © 2018 Sri Meenakshi Store. All Rights Reserved.
             </p>
           </div>
         </div>

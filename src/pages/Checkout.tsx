@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CreditCard, Truck, MapPin, Phone, User, Mail } from 'lucide-react';
+import { Truck, MapPin, Phone, User, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -249,7 +249,7 @@ const Checkout = () => {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <CreditCard className="h-5 w-5" />
+                      <Truck className="h-5 w-5" />
                       Payment Method
                     </CardTitle>
                   </CardHeader>
@@ -271,35 +271,7 @@ const Checkout = () => {
                           </Label>
                         </div>
 
-                        <div className="flex items-center space-x-2 p-4 border rounded-lg">
-                          <RadioGroupItem value="card" id="card" />
-                          <Label htmlFor="card" className="flex-1 cursor-pointer">
-                            <div className="flex items-center gap-3">
-                              <CreditCard className="h-5 w-5 text-blue-600" />
-                              <div>
-                                <div className="font-semibold">Credit/Debit Card</div>
-                                <div className="text-sm text-muted-foreground">
-                                  Secure online payment
-                                </div>
-                              </div>
-                            </div>
-                          </Label>
-                        </div>
 
-                        <div className="flex items-center space-x-2 p-4 border rounded-lg">
-                          <RadioGroupItem value="upi" id="upi" />
-                          <Label htmlFor="upi" className="flex-1 cursor-pointer">
-                            <div className="flex items-center gap-3">
-                              <Phone className="h-5 w-5 text-purple-600" />
-                              <div>
-                                <div className="font-semibold">UPI Payment</div>
-                                <div className="text-sm text-muted-foreground">
-                                  Pay using UPI apps like GPay, PhonePe
-                                </div>
-                              </div>
-                            </div>
-                          </Label>
-                        </div>
                       </div>
                     </RadioGroup>
                   </CardContent>
