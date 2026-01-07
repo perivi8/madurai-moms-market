@@ -149,7 +149,7 @@ const Wholesale = () => {
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 79042 38354"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
                         required
@@ -247,7 +247,7 @@ const Wholesale = () => {
                       <Phone className="h-5 w-5 text-primary" />
                       <div>
                         <div className="font-label font-semibold text-foreground">Wholesale Hotline</div>
-                        <div className="font-body text-muted-foreground">+91 98765 43210</div>
+                        <div className="font-body text-muted-foreground">+91 79042 38354</div>
                       </div>
                     </div>
                     
@@ -255,7 +255,7 @@ const Wholesale = () => {
                       <Mail className="h-5 w-5 text-primary" />
                       <div>
                         <div className="font-label font-semibold text-foreground">Wholesale Email</div>
-                        <div className="font-body text-muted-foreground">wholesale@srimeenakshistore.com</div>
+                        <div className="font-body text-muted-foreground">srimeenakshistore388@gmail.com</div>
                       </div>
                     </div>
                   </div>

@@ -65,7 +65,7 @@ export const allProducts: Product[] = [
     unit: 'pack',
     category: 'Packaged Foods',
     description: 'Delicious milk biscuits fortified with calcium and vitamins. Great for kids and adults.',
-    inStock: false
+    inStock: true
   },
   {
     id: '7',
@@ -265,7 +265,7 @@ export const allProducts: Product[] = [
     unit: '55g',
     category: 'Confectionery',
     description: 'Smooth and creamy milk chocolate that melts in your mouth.',
-    inStock: false
+    inStock: true
   }
 ];
 

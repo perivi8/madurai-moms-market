@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Users, Heart, Award, Clock } from 'lucide-react';
+import { Users, Heart, Award, Clock, Mail, Phone } from 'lucide-react';
 
 const AboutUs = () => {
   return (
@@ -124,6 +124,52 @@ const AboutUs = () => {
               </h3>
               <p className="font-body text-muted-foreground">
                 Consistent, dependable service that you can count on, day after day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Support */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-heading font-bold text-foreground mb-4">
+              Customer Support
+            </h2>
+            <p className="text-lg font-body text-muted-foreground max-w-2xl mx-auto">
+              We're here to help you with any questions or concerns
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="text-center p-6 bg-cream/30 rounded-lg">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="h-6 w-6 text-primary-foreground" />
+              </div>
+              <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                Email Us
+              </h3>
+              <p className="font-body text-primary font-semibold">
+                contact@srimeenakshi.store
+              </p>
+              <p className="font-body text-primary font-semibold">
+                srimeenakshistore388@gmail.com
+              </p>
+            </div>
+
+            <div className="text-center p-6 bg-cream/30 rounded-lg">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="h-6 w-6 text-primary-foreground" />
+              </div>
+              <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                Call Us
+              </h3>
+              <p className="font-body text-primary font-semibold">
+                +91 96555 86100
+              </p>
+              <p className="font-body text-primary font-semibold">
+                +91 79042 38354 (WhatsApp)
               </p>
             </div>
           </div>

@@ -314,7 +314,7 @@ const ProductDetails = () => {
                     <div>
                       <h4 className="font-semibold mb-1">Customer Support</h4>
                       <p className="text-muted-foreground">
-                        Contact us at +91 98765 43210 for any product-related queries.
+                        Contact us at +91 96555 86100 for any product-related queries.
                       </p>
                     </div>
                   </div>

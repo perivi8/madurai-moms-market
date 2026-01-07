@@ -21,7 +21,7 @@ const Header = () => {
 
   // WhatsApp redirect function
   const handleWhatsAppOrder = () => {
-    const phoneNumber = '919655586100'; // Sri Meenakshi Store WhatsApp number
+    const phoneNumber = '917904238354'; // Sri Meenakshi Store WhatsApp number
     const message = 'Hello! I would like to place an order from Sri Meenakshi Store.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

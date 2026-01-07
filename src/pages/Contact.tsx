@@ -106,7 +106,7 @@ const Contact = () => {
                         </h3>
                         <p className="font-body text-muted-foreground">
                           Store: +91 96555 86100<br />
-                          WhatsApp Orders: +91 96555 86100<br />
+                          WhatsApp Orders: +91 79042 38354<br />
                           Customer Support: +91 96555 86100
                         </p>
                       </div>
@@ -127,7 +127,7 @@ const Contact = () => {
                         <p className="font-body text-muted-foreground">
                           General: srimeenakshistore388@gmail.com<br />
                           Customer Support: contact@srimeenakshi.store<br />
-                          Orders & Inquiries: contact@srimeenakshi.store
+                          Orders & Inquiries: srimeenakshistore388@gmail.com
                         </p>
                       </div>
                     </div>

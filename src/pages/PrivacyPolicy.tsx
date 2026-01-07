@@ -352,8 +352,11 @@ const PrivacyPolicy = () => {
                 <p className="text-muted-foreground mb-4">
                   Speak with our privacy team
                 </p>
-                <div className="font-semibold text-primary mb-4">
+                <div className="font-semibold text-primary mb-2">
                   +91 96555 86100
+                </div>
+                <div className="font-semibold text-primary mb-4">
+                  +91 79042 38354 (WhatsApp)
                 </div>
                 <div className="text-sm text-muted-foreground">
                   Mon-Sat: 9:00 AM - 7:00 PM
@@ -371,7 +374,7 @@ const PrivacyPolicy = () => {
                   Send us your privacy concerns
                 </p>
                 <div className="font-semibold text-primary mb-4">
-                  contact@srimeenakshi.store
+                  srimeenakshistore388@gmail.com
                 </div>
                 <div className="text-sm text-muted-foreground">
                   Response within 24 hours

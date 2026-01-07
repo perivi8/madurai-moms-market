@@ -27,6 +27,10 @@ const Footer = () => {
                 <span className="font-body">+91 96555 86100</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
+                <Phone className="h-4 w-4 opacity-75" />
+                <span className="font-body">+91 79042 38354 (WhatsApp)</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 opacity-75" />
                 <span className="font-body">contact@srimeenakshi.store</span>
               </div>
